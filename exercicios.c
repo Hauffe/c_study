@@ -203,9 +203,18 @@ void exercicio12(){
 
 }
 
-void exercicio14(){
+void exercicio13(){
     printf("--------------Exercicio 14: Cedulas--------------:\n\n");
     char enter;
     scanf ("%c", &enter);
 
+
+    int quilometragem;
+    float litros;
+    printf ("Digite a quilometragem:");
+    scanf ("%d", &quilometragem);
+    printf ("Digite os litros:");
+    scanf ("%f", &litros);
+
+    printf("Consumo medio: %.3f KM/l", (quilometragem/litros));
 }
