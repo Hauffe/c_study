@@ -6,7 +6,8 @@
 
 
 void exercicio5(),exercicio6(),exercicio7(),exercicio8(), exercicio9(),exercicio10();
-void exercicio11(), exercicio12(), exercicio13(),exercicio14();
+void exercicio11(), exercicio12(), exercicio13(),exercicio14(),exercicio15();
+void exercicio16(), exercicio17(), exercicio18(),exercicio19();
 
 int main() {
 
@@ -43,16 +44,22 @@ int main() {
             exercicio13();
             break;
         case 14:
+            exercicio14();
             break;
         case 15:
+            exercicio15();
             break;
         case 16:
+            exercicio16();
             break;
         case 17:
+            exercicio17();
             break;
         case 18:
+            exercicio18();
             break;
         case 19:
+            exercicio19();
             break;
         default:
             printf("Exercicio %d nao implementado", opcao);
@@ -204,7 +211,7 @@ void exercicio12(){
 }
 
 void exercicio13(){
-    printf("--------------Exercicio 14: Cedulas--------------:\n\n");
+    printf("--------------Exercicio 13: KM/L--------------:\n\n");
     char enter;
     scanf ("%c", &enter);
 
@@ -217,4 +224,114 @@ void exercicio13(){
     scanf ("%f", &litros);
 
     printf("Consumo medio: %.3f KM/l", (quilometragem/litros));
+}
+
+void exercicio14(){
+    printf("--------------Exercicio 14: Cedulas--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    int n50, n5, n1, resto, valor;
+    printf ("Digite o valor:");
+    scanf ("%d", &valor);
+    resto = valor%50;
+    n50 = (valor-resto)/50;
+    n5 = (resto-(resto%5))/5;
+    n1 = resto%5;
+
+    printf("%d notas de R$50\n", n50);
+    printf("%d notas de R$5\n", n5);
+    printf("%d notas de R$1\n", n1);
+}
+
+void exercicio15(){
+    printf("--------------Exercicio 15: Converter segundos--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    int valor, horasAux, minutosAux;
+    int dias, horas, minutos, segundos;
+    printf ("Digite o valor em segundos:");
+    scanf ("%d", &valor);
+    segundos = valor%60;
+    minutosAux = (valor-segundos)/60;
+    minutos = minutosAux%60;
+    horasAux = (minutosAux-minutos)/60;
+    horas = horasAux%24;
+    dias = (horas-horasAux)/24;
+
+    printf("Tempo: dias:%d - tempo: %d:%d:%d",dias, horas, minutos, segundos);
+}
+
+void exercicio16(){
+    printf("--------------Exercicio 16: Ultimo digito--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    int valor;
+    printf ("Digite o valor:");
+    scanf ("%d", &valor);
+    printf("Ultimo digito: %d", valor%10);
+
+}
+
+void exercicio17(){
+    printf("--------------Exercicio 17: Celsius para Farenheit--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    int celsius, farenheit;
+    printf("Digite o valor em Celsius:");
+    scanf ("%d", &celsius);
+
+    farenheit = (celsius * 9 / 5) + 32;
+
+    printf("Temperatura em farenheit: %d", farenheit);
+}
+
+void exercicio18(){
+    printf("--------------Exercicio 18: Gasto da viagem--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    float distancia;
+    int pedagios;
+
+    //Valores
+    float gasolina = 2.60, valorPedagio = 8.00, total;
+    int kmPorLitro = 15;
+
+    printf("Digite a distancia em quilometros:");
+    scanf ("%f", &distancia);
+    printf("Digite o numero de pedagios:");
+    scanf ("%d", &pedagios);
+
+    total = (pedagios*valorPedagio)+((distancia/kmPorLitro)*gasolina);
+
+    printf("Total da viagem: %.2f", total);
+
+}
+
+void exercicio19(){
+    printf("--------------Exercicio 19: Média do aluno--------------:\n\n");
+    char enter;
+    scanf ("%c", &enter);
+
+    float nota1, nota2, nota3, media;
+
+    printf("Digite a primeira nota:");
+    scanf ("%f", &nota1);
+    printf("Digite a segunda nota:");
+    scanf ("%f", &nota2);
+    printf("Digite a terceira nota:");
+    scanf ("%f", &nota3);
+
+    nota1 *= 2;
+    nota2 *= 3;
+    nota3 *= 5;
+
+    media = (nota1+nota2+nota3)/10;
+
+    printf("A media eh: %.1f", media);
+
 }
