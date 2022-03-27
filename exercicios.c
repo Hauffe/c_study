@@ -9,62 +9,39 @@ void exercicio5(),exercicio6(),exercicio7(),exercicio8(), exercicio9(),exercicio
 void exercicio11(), exercicio12(), exercicio13(),exercicio14(),exercicio15();
 void exercicio16(), exercicio17(), exercicio18(),exercicio19();
 
+void (*f[19])();
+
 int main() {
 
-    int opcao;
+    f[5] = exercicio5; /* address of sum() */
+    f[6] = exercicio6; /* address of sum() */
+    f[7] = exercicio7; /* address of sum() */
+    f[8] = exercicio8; /* address of sum() */
+    f[9] = exercicio9; /* address of sum() */
+    f[10] = exercicio10; /* address of sum() */
+    f[11] = exercicio11; /* address of sum() */
+    f[12] = exercicio12; /* address of sum() */
+    f[13] = exercicio13; /* address of sum() */
+    f[14] = exercicio14; /* address of sum() */
+    f[15] = exercicio15; /* address of sum() */
+    f[16] = exercicio16; /* address of sum() */
+    f[17] = exercicio17; /* address of sum() */
+    f[18] = exercicio18; /* address of sum() */
+    f[19] = exercicio19; /* address of sum() */
 
-    printf("Digite um exercicio:\n");
-    scanf("%d", &opcao);
-    switch (opcao) {
-        case 5:
-            exercicio5();
-            break;
-        case 6:
-            exercicio6();
-            break;
-        case 7:
-            exercicio7();
-            break;
-        case 8:
-            exercicio8();
-            break;
-        case 9:
-            exercicio9();
-            break;
-        case 10:
-            exercicio10();
-            break;
-        case 11:
-            exercicio11();
-            break;
-        case 12:
-            exercicio12();
-            break;
-        case 13:
-            exercicio13();
-            break;
-        case 14:
-            exercicio14();
-            break;
-        case 15:
-            exercicio15();
-            break;
-        case 16:
-            exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
-        case 19:
-            exercicio19();
-            break;
-        default:
-            printf("Exercicio %d nao implementado", opcao);
 
-    }
+    int opcao, flag;
+    do{
+        printf("Digite um exercicio de 5 a 19:\n");
+        scanf("%d", &opcao);
+        if(opcao<5 || opcao>19){
+            printf("Valor invalido\n");
+            flag = 1;
+        }else{
+            f[opcao]();
+            flag = 0;
+        }
+    } while (flag);
     return 0;
 }
 
