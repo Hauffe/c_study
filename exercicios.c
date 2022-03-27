@@ -13,21 +13,21 @@ void (*f[19])();
 
 int main() {
 
-    f[5] = exercicio5; /* address of sum() */
-    f[6] = exercicio6; /* address of sum() */
-    f[7] = exercicio7; /* address of sum() */
-    f[8] = exercicio8; /* address of sum() */
-    f[9] = exercicio9; /* address of sum() */
-    f[10] = exercicio10; /* address of sum() */
-    f[11] = exercicio11; /* address of sum() */
-    f[12] = exercicio12; /* address of sum() */
-    f[13] = exercicio13; /* address of sum() */
-    f[14] = exercicio14; /* address of sum() */
-    f[15] = exercicio15; /* address of sum() */
-    f[16] = exercicio16; /* address of sum() */
-    f[17] = exercicio17; /* address of sum() */
-    f[18] = exercicio18; /* address of sum() */
-    f[19] = exercicio19; /* address of sum() */
+    f[5] = exercicio5;
+    f[6] = exercicio6;
+    f[7] = exercicio7;
+    f[8] = exercicio8;
+    f[9] = exercicio9;
+    f[10] = exercicio10;
+    f[11] = exercicio11;
+    f[12] = exercicio12;
+    f[13] = exercicio13;
+    f[14] = exercicio14;
+    f[15] = exercicio15;
+    f[16] = exercicio16;
+    f[17] = exercicio17;
+    f[18] = exercicio18;
+    f[19] = exercicio19;
 
 
     int opcao, flag;
