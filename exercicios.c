@@ -3,33 +3,41 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 
 void exercicio5(),exercicio6(),exercicio7(),exercicio8(), exercicio9(),exercicio10();
 void exercicio11(), exercicio12(), exercicio13(),exercicio14(),exercicio15();
-void exercicio16(), exercicio17(), exercicio18(),exercicio19(), exercicio20(), exercicio21(), exercicio22();
+void exercicio16(), exercicio17(), exercicio18(),exercicio19();
+
 void (*f[19])();
 
 int main() {
 
-    f[5] = exercicio5, f[6] = exercicio6, f[7] = exercicio7, f[8] = exercicio8, f[9] = exercicio9, f[10] = exercicio10;
-    f[11] = exercicio11, f[12] = exercicio12, f[13] = exercicio13, f[14] = exercicio14, f[15] = exercicio15;
-    f[16] = exercicio16, f[17] = exercicio17, f[18] = exercicio18, f[19] = exercicio19, f[20] = exercicio20;
-    f[21] = exercicio21; f[22] = exercicio22; f[23] = exercicio20;
+    f[5] = exercicio5;
+    f[6] = exercicio6;
+    f[7] = exercicio7;
+    f[8] = exercicio8;
+    f[9] = exercicio9;
+    f[10] = exercicio10;
+    f[11] = exercicio11;
+    f[12] = exercicio12;
+    f[13] = exercicio13;
+    f[14] = exercicio14;
+    f[15] = exercicio15;
+    f[16] = exercicio16;
+    f[17] = exercicio17;
+    f[18] = exercicio18;
+    f[19] = exercicio19;
 
 
     int opcao, flag;
-    do
-    {
-        printf("Digite um exercicio de 5 a 23:\n");
+    do{
+        printf("Digite um exercicio de 5 a 19:\n");
         scanf("%d", &opcao);
-        if(opcao<5 || opcao>23)
-        {
+        if(opcao<5 || opcao>19){
             printf("Valor invalido\n");
             flag = 1;
-        }else
-        {
+        }else{
             f[opcao]();
             flag = 0;
         }
@@ -302,126 +310,5 @@ void exercicio19(){
     media = (nota1+nota2+nota3)/10;
 
     printf("A media eh: %.1f", media);
-
-}
-
-void exercicio20(){
-    printf("--------------Exercicio 20: Equacao do segundo grau--------------:\n\n");
-
-    int a, b, c, delta;
-    int raiz, raiz1, raiz2;
-
-    printf("Equacao do 2o grau da forma: ax^2 + bx + c \n");
-    printf("Digite o valor de a: ");
-    scanf("%d", &a);
-    printf("Digite o valor de b: ");
-    scanf("%d", &b);
-    printf("Digite o valor de c: ");
-    scanf("%d", &c);
-
-    if(a==0)
-    {
-        printf("Nao e uma equacao de segundo grau");
-    }else{
-        delta = b*b - (4*a*c);
-    }
-
-    if (delta<0)
-    {
-        printf("Delta menor que 0. Raizes imaginarias.");
-    }else if(delta == 0)
-    {
-        raiz = -b / (2 * a);
-        printf("Delta=0 , raiz = %d", raiz);
-    }else
-    {
-        raiz1 = (-b + sqrt(delta)) / (2 * a);
-        raiz2 = (-b - sqrt(delta)) / (2 * a);
-        printf("Raizes: %d e %d", raiz1, raiz2);
-    }
-}
-
-void exercicio21(){
-    printf("--------------Exercicio 21: Coordenadas--------------:\n\n");
-
-    float x, y;
-
-    printf("Digite o valor de x: ");
-    scanf("%f", &x);
-    printf("Digite o valor de y: ");
-    scanf("%f", &y);
-
-    if(x!=0 || y!=0)
-    {
-        if(x == 0)
-        {
-            printf("Eixo y");
-        }
-        else if(y == 0)
-        {
-            printf("Eixo x");
-        }else
-        {
-            if(x>0 || y>0){
-                if(x<0)
-                {
-                    printf("Q2");
-                }else if(y<0)
-                {
-                    printf("Q4");
-                }else
-                {
-                    printf("Q1");
-                }
-            }else{
-                    printf("Q3");
-            }
-        }
-    } else
-    {
-        printf("Origem");
-    }
-
-}
-
-void exercicio22(){
-    printf("--------------Exercicio 22: Idade--------------:\n\n");
-
-    int ano_nascimento, ano_atual;
-    int idade_anos;
-
-    printf("Digite o ano atual: ");
-    scanf("%d", &ano_atual);
-    printf("Digite o ano de nascimento: ");
-    scanf("%d", &ano_nascimento);
-
-    idade_anos = ano_atual - ano_nascimento;
-    printf("%d anos arredondados", idade_anos);
-
-    printf("\n--------------Exercicio 22.2: dia da semana--------------:\n\n");
-
-    int mes_nascimento, dia_mes_nascimento, dia_semana_nascimento;
-    int século, ano_seculo;
-    int formula_mes, formula_ano_seculo, formula_seculo;
-
-    printf("Digite o mes: ");
-    scanf("%d", &mes_nascimento);
-    printf("Digite o dia do mes: ");
-    scanf("%d", &dia_mes_nascimento);
-
-    ano_seculo = ano_nascimento%100;
-    século = ano_nascimento/100;
-    formula_mes = ((mes_nascimento+1)*26)/10;
-    formula_ano_seculo = ano_seculo + (ano_seculo/4);
-    formula_seculo = (século/4)+5*século;
-
-    dia_semana_nascimento=(dia_mes_nascimento+formula_mes+formula_ano_seculo+formula_seculo)%7;
-
-    printf("Dia da semana e %d", dia_semana_nascimento);
-
-}
-
-void exercicio23(){
-    printf("--------------Exercicio 23: --------------:\n\n");
 
 }
